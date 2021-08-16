@@ -5,4 +5,8 @@ export const messages = defineMessages({
     id: "productitem.add.to.cart",
     defaultMessage: "Do košíku",
   },
+  removeFromCart: {
+    id: "productitem.remove.from.cart",
+    defaultMessage: "Odebrat",
+  },
 });
