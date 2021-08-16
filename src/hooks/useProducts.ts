@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { IProduct } from "../models";
 
-export const useProducts = () => {
+export const useProducts = (searchQuery = "") => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [error, setError] = useState<Error>();
 
@@ -18,5 +18,10 @@ export const useProducts = () => {
     })();
   }, []);
 
-  return { products, error };
+  return {
+    products: products.filter((product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    ),
+    error,
+  };
 };

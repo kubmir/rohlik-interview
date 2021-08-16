@@ -15,6 +15,5 @@ export const ProductGridWrapper = styled.div`
 `;
 
 export const ProductListingSection = styled.div`
-  width: 80%;
   align-content: center;
 `;

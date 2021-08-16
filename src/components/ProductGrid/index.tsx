@@ -1,11 +1,16 @@
 import React from "react";
+import { useSearchContext } from "../../context/SearchContext";
 import { useCartContent } from "../../hooks/useCartContent";
 import { useProducts } from "../../hooks/useProducts";
 import { ProductItem } from "../ProductItem";
 import { ProductGridWrapper, ProductListingSection } from "./styled";
 
 export const ProductGrid: React.FC = () => {
-  const { products, error } = useProducts();
+  const {
+    state: { searchQuery },
+  } = useSearchContext();
+
+  const { products, error } = useProducts(searchQuery);
   const cartContent = useCartContent();
 
   if (error) {
