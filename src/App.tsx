@@ -3,6 +3,7 @@ import { IntlProvider } from "react-intl";
 import { ProductGrid } from "./components/ProductGrid";
 import { SearchBar } from "./components/SearchBar";
 import { SearchContextProvider } from "./context/SearchContext";
+import { CartVisualizer } from "./components/CartVisualizer";
 
 import "./App.css";
 
@@ -12,6 +13,7 @@ const App = () => (
       <SearchContextProvider>
         <SearchBar />
         <ProductGrid />
+        <CartVisualizer />
       </SearchContextProvider>
     </IntlProvider>
   </div>
