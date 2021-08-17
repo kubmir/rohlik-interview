@@ -22,7 +22,7 @@ export const CartCircle = styled.div`
   box-shadow: 0 0 0.25rem 0 ${(props) => props.theme.colors.darkest};
 
   :before {
-    content: attr(data-countInCart);
+    content: attr(data-countincart);
     position: absolute;
     display: flex;
     justify-content: center;
@@ -58,5 +58,9 @@ export const CartModal = styled(Modal)`
   scrollbar-width: none;
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
   }
 `;

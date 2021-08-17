@@ -10,7 +10,7 @@ import { DEFAULT_THEME } from "./theme";
 import "./App.css";
 
 const App = () => (
-  <div className="App">
+  <div id="root" className="App">
     <IntlProvider messages={{}} locale="cs" defaultLocale="cs">
       <ThemeProvider theme={DEFAULT_THEME}>
         <SearchContextProvider>

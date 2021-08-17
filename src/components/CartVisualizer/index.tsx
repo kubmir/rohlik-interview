@@ -16,14 +16,13 @@ export const CartVisualizer: React.FC = () => {
     <>
       <CartModal
         isOpen={isCartModalOpen}
-        preventScroll={true}
         onRequestClose={toggleModal}
-        shouldFocusAfterRender={true}
+        appElement={document.getElementById("root") as HTMLElement}
       >
         <CartList />
       </CartModal>
       <CartContentIconWrapper onClick={toggleModal}>
-        <CartCircle data-countInCart={cartContent.length}>
+        <CartCircle data-countincart={cartContent.length}>
           <FaShoppingCart size="36px" color="white" />
         </CartCircle>
       </CartContentIconWrapper>
