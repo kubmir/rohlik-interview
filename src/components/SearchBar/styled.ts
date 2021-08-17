@@ -6,5 +6,5 @@ export const SearchInput = styled.input`
   height: 2rem;
   padding-left: 1rem;
   border-radius: 0.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid ${(props) => props.theme.colors.lightDark};
 `;

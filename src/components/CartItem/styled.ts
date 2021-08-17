@@ -7,8 +7,8 @@ export const ProductCircle = styled.div<{
   height: 3rem;
   min-width: 3rem;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid ${(props) => props.theme.colors.lightDark};
+  box-shadow: 0 0 0.25rem 0 ${(props) => props.theme.colors.lightDark};
   background-image: url(${(props) => props.imageUrl});
   background-size: contain;
   background-repeat: no-repeat;
@@ -31,4 +31,5 @@ export const ProductPrice = styled.div`
   font-size: 0.75rem;
   margin-left: 1rem;
   align-self: center;
+  min-width: 10%;
 `;

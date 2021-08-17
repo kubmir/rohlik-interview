@@ -38,28 +38,28 @@ const Button = styled.button`
   cursor: pointer;
 
   border-radius: 0.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid ${(props) => props.theme.colors.lightDark};
 `;
 
 export const AddToCartButton = styled(Button)`
-  background: rgb(255, 255, 255);
-  color: rgb(28, 37, 41);
+  background: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.dark};
 
   &:hover {
-    color: rgb(255, 255, 255);
-    background: rgb(109, 163, 5);
+    color: ${(props) => props.theme.colors.white};
+    background: ${(props) => props.theme.colors.success};
   }
 `;
 
 export const RemoveFromCart = styled(Button)`
-  background: rgba(190, 17, 3, 0.75);
-  color: rgb(28, 37, 41);
+  background: ${(props) => props.theme.colors.danger};
+  color: ${(props) => props.theme.colors.white};
   margin: 0 auto;
 
   &:hover {
-    color: rgba(190, 17, 3, 0.75);
-    background: rgb(255, 255, 255);
-    border: 1px solid rgba(190, 17, 3, 0.75);
+    color: ${(props) => props.theme.colors.danger};
+    background: ${(props) => props.theme.colors.white};
+    border: 1px solid ${(props) => props.theme.colors.danger};
   }
 `;
 

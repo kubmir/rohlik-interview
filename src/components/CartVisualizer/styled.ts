@@ -17,9 +17,9 @@ export const CartCircle = styled.div`
   height: 4rem;
   min-width: 4rem;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 1);
-  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 1);
+  border: 1px solid ${(props) => props.theme.colors.darkest};
+  background-color: ${(props) => props.theme.colors.darkest};
+  box-shadow: 0 0 0.25rem 0 ${(props) => props.theme.colors.darkest};
 
   :before {
     content: attr(data-countInCart);
@@ -29,11 +29,11 @@ export const CartCircle = styled.div`
     align-items: center;
     top: -0.3rem;
     right: -0.3rem;
-    color: rgb(255, 255, 255);
+    color: ${(props) => props.theme.colors.white};
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background: rgb(109, 163, 5);
+    background: ${(props) => props.theme.colors.success};
   }
 `;
 
@@ -48,9 +48,9 @@ export const CartModal = styled(Modal)`
   left: 50%;
   transform: translate(-50%, -50%) !important;
 
-  background-color: rgba(255, 255, 255, 1);
+  background-color: ${(props) => props.theme.colors.white};
   border-radius: 5%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid ${(props) => props.theme.colors.lightDark};
 
   overflow: scroll;
 

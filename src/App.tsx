@@ -1,20 +1,24 @@
 import { IntlProvider } from "react-intl";
+import { ThemeProvider } from "styled-components";
 
 import { ProductGrid } from "./components/ProductGrid";
 import { SearchBar } from "./components/SearchBar";
 import { SearchContextProvider } from "./context/SearchContext";
 import { CartVisualizer } from "./components/CartVisualizer";
+import { DEFAULT_THEME } from "./theme";
 
 import "./App.css";
 
 const App = () => (
   <div className="App">
     <IntlProvider messages={{}} locale="cs" defaultLocale="cs">
-      <SearchContextProvider>
-        <SearchBar />
-        <ProductGrid />
-        <CartVisualizer />
-      </SearchContextProvider>
+      <ThemeProvider theme={DEFAULT_THEME}>
+        <SearchContextProvider>
+          <SearchBar />
+          <ProductGrid />
+          <CartVisualizer />
+        </SearchContextProvider>
+      </ThemeProvider>
     </IntlProvider>
   </div>
 );
