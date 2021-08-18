@@ -17,3 +17,13 @@ export const ProductGridWrapper = styled.div`
 export const ProductListingSection = styled.div`
   align-content: center;
 `;
+
+export const ErrorMessage = styled.p`
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.colors.danger};
+`;
+
+export const NoProductsMessage = styled.p`
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.colors.dark};
+`;
